@@ -4,10 +4,9 @@ return {
 		dependencies = {
 			"rktjmp/lush.nvim",
 		},
-        config = function()
-
-            vim.cmd("colorscheme darcula-solid")
-        end
+		config = function()
+			vim.cmd("colorscheme darcula-solid")
+		end,
 	},
 	{
 		"EdenEast/nightfox.nvim",
