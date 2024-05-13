@@ -11,6 +11,7 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set('n', '<C-n>', ':Neotree filesystem toggle<CR>', {})
+vim.keymap.set('n', '<leader>b', ':BlameToggle window<CR>')
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
