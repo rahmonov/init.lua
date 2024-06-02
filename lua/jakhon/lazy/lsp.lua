@@ -32,11 +32,11 @@ return {
                 "pyright",
             },
             handlers = {
-                function(server_name) -- default handler (optional)
-                    require("lspconfig")[server_name].setup({
-                        capabilities = capabilities,
-                    })
-                end,
+                -- function(server_name) -- default handler (optional)
+                --     require("lspconfig")[server_name].setup({
+                --         capabilities = capabilities,
+                --     })
+                -- end,
 
                 -- ["rust_analyzer"] = function()
                 --     local lspconfig = require("lspconfig")
