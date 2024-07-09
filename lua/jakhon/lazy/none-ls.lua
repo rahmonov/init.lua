@@ -8,7 +8,8 @@ return {
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.formatting.black,
 				null_ls.builtins.formatting.isort,
---				null_ls.builtins.diagnostics.eslint,
+				null_ls.builtins.diagnostics.djlint,
+				null_ls.builtins.formatting.djhtml,
 			},
 		})
 

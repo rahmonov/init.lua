@@ -30,13 +30,18 @@ return {
                 "tsserver",
                 "clangd",
                 "pyright",
+                "jsonls",
+                "marksman",
+                "html",
             },
             handlers = {
-                -- function(server_name) -- default handler (optional)
-                --     require("lspconfig")[server_name].setup({
-                --         capabilities = capabilities,
-                --     })
-                -- end,
+                function(server_name) -- default handler (optional)
+                    if server_name ~= "rust_analyzer" then -- rust is handled with rustacean plugin
+                        require("lspconfig")[server_name].setup({
+                            capabilities = capabilities,
+                        })
+                    end
+                end,
 
                 -- ["rust_analyzer"] = function()
                 --     local lspconfig = require("lspconfig")
@@ -50,6 +55,7 @@ return {
                 --        }
                 --     })
                 -- end,
+                --
 
                 ["pyright"] = function()
                     local lspconfig = require("lspconfig")
@@ -58,10 +64,10 @@ return {
                         settings = {
                             python = {
                                 analysis = {
-                                    typeCheckingMode = "off"
-                                }
-                            }
-                        }
+                                    typeCheckingMode = "off",
+                                },
+                            },
+                        },
                     })
                 end,
 
